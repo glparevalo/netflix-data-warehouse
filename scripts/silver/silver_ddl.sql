@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS silver.netflix_data;
 
 CREATE TABLE IF NOT EXISTS silver.netflix_data(
-	show_id			VARCHAR PRIMARY KEY,
+	show_key		VARCHAR PRIMARY KEY,
 	show_type		VARCHAR,
 	title			VARCHAR,
 	director		VARCHAR,
@@ -12,6 +12,7 @@ CREATE TABLE IF NOT EXISTS silver.netflix_data(
 	rating			VARCHAR,
 	duration		VARCHAR,
 	listed_in		VARCHAR,
-	description		VARCHAR
+	description		VARCHAR,
+	show_id			VARCHAR,
+	datetime_added	TIMESTAMPTZ
 );
-
