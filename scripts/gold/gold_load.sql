@@ -25,13 +25,13 @@ SELECT
 FROM silver.nm_show_casts;
 
 
--- gold.dim_available_in_countries
-DROP VIEW IF EXISTS gold.dim_available_in_countries;
+-- gold.dim_production_countries
+DROP VIEW IF EXISTS gold.dim_production_countries;
 
-CREATE VIEW gold.dim_available_in_countries AS
+CREATE VIEW gold.dim_production_countries AS
 SELECT
 	country_key,
-	country as available_in_country
+	country as production_country
 FROM silver.nm_countries;
 
 
@@ -41,7 +41,7 @@ DROP VIEW IF EXISTS gold.dim_show_director;
 CREATE VIEW gold.dim_show_director AS
 SELECT
 	director_key,
-	director as show_directors
+	director as show_director
 FROM silver.nm_directors;
 
 
