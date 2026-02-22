@@ -1,3 +1,19 @@
+-- silver.nm_netflix_data
+TRUNCATE TABLE silver.nm_netflix_data;
+
+INSERT INTO silver.nm_netflix_data
+SELECT 
+	show_key,
+	show_type,
+	title,
+	date_added,
+	release_year,
+	rating,
+	duration,
+	description
+FROM silver.netflix_data;
+
+
 -- silver.nm_show_casts
 TRUNCATE TABLE silver.nm_show_casts;
 
